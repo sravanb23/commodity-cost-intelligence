@@ -1,0 +1,44 @@
+{
+  "pipeline": "ingestion",
+  "run_at": "2026-03-17 00:17:26",
+  "total_duration": 19.0,
+  "status": "SUCCESS",
+  "steps": [
+    {
+      "step": "01a",
+      "label": "Aluminum Ingestion (World Bank)",
+      "status": "SUCCESS",
+      "duration": 4.6
+    },
+    {
+      "step": "01b",
+      "label": "Lithium Ingestion (USGS + IMF)",
+      "status": "SUCCESS",
+      "duration": 2.0
+    },
+    {
+      "step": "01c",
+      "label": "Cobalt Ingestion (IMF Monthly USD)",
+      "status": "SUCCESS",
+      "duration": 2.0
+    },
+    {
+      "step": "01d",
+      "label": "Macro Variables (FRED + Yahoo Finance)",
+      "status": "SUCCESS",
+      "duration": 7.8
+    },
+    {
+      "step": "02",
+      "label": "Warehouse Validation & Health Check",
+      "status": "SUCCESS",
+      "duration": 1.5
+    },
+    {
+      "step": "03",
+      "label": "Master Dataset Build",
+      "status": "SUCCESS",
+      "duration": 1.2
+    }
+  ]
+}

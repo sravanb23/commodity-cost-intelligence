@@ -1,0 +1,110 @@
+{
+  "lithium": {
+    "last_updated": "2026-03-17 00:17:13",
+    "unit": "USD per metric ton (battery grade equivalent)",
+    "pre_2012": {
+      "source": "USGS Mineral Commodity Summaries",
+      "original_unit": "USD per metric ton (lithium carbonate)",
+      "method": "Annual prices scaled to IMF battery grade, then linearly interpolated to monthly",
+      "note": "Lithium was low-volatility industrial commodity pre-2012. Annual interpolation is appropriate.",
+      "bridging_factor": 15.218448,
+      "usgs_2012_original": 4220.0,
+      "imf_2012_average": 64221.85
+    },
+    "post_2012": {
+      "source": "IMF Primary Commodity Price System (PCPS)",
+      "unit": "USD per metric ton (99% battery grade)",
+      "method": "Monthly actual prices \u2014 no transformation",
+      "frequency": "Monthly"
+    },
+    "splice_date": "2012-06-01",
+    "splice_discontinuity_pct": 0.9,
+    "total_rows": 314,
+    "date_range_start": "2000-01-01",
+    "date_range_end": "2026-02-01",
+    "warehouse_files": {
+      "usgs_original": "data/warehouse/lithium_usgs.csv",
+      "imf_raw": "data/warehouse/lithium_imf_raw.csv",
+      "combined": "data/warehouse/lithium_combined.csv"
+    }
+  },
+  "cobalt": {
+    "last_updated": "2026-03-17 00:17:15",
+    "primary_source": "IMF Primary Commodity Price System (PCPS)",
+    "reference_source": "USGS Mineral Commodity Summaries",
+    "unit": "USD per metric ton",
+    "method": "Direct monthly USD spot prices \u2014 no transformation needed",
+    "frequency": "Monthly",
+    "total_rows": 314,
+    "date_range_start": "2000-01-01",
+    "date_range_end": "2026-02-01",
+    "warehouse_files": {
+      "imf_monthly": "data/warehouse/cobalt_imf_monthly.csv",
+      "usgs_reference": "data/warehouse/cobalt_usgs.csv"
+    }
+  },
+  "macro": {
+    "last_updated": "2026-03-17 00:17:23",
+    "fred_series": {
+      "DCOILWTICO": {
+        "column": "wti_crude_usd",
+        "unit": "USD per barrel",
+        "notes": "WTI crude oil spot price \u2014 energy cost proxy for aluminum smelting"
+      },
+      "MHHNGSP": {
+        "column": "natural_gas_usd",
+        "unit": "USD per million BTU",
+        "notes": "Henry Hub natural gas spot price \u2014 smelting and processing energy cost"
+      },
+      "IPMAN": {
+        "column": "industrial_production_idx",
+        "unit": "Index (2017=100)",
+        "notes": "US Industrial Production Manufacturing Index \u2014 commodity demand proxy"
+      },
+      "DEXCHUS": {
+        "column": "usd_cny",
+        "unit": "CNY per USD",
+        "notes": "USD/CNY exchange rate \u2014 China commodity demand and export competitiveness proxy"
+      }
+    },
+    "vix": {
+      "source": "Yahoo Finance \u2014 ^VIX",
+      "unit": "Index (implied volatility %)",
+      "frequency": "Monthly average of daily closes"
+    },
+    "date_range_start": "2000-01-01",
+    "date_range_end": "2026-03-01",
+    "total_rows": 315,
+    "warehouse_files": {
+      "fred": "data/warehouse/macro_fred.csv",
+      "vix": "data/warehouse/vix_yahoo.csv"
+    }
+  },
+  "master": {
+    "last_built": "2026-03-17 00:17:26",
+    "output_path": "data/processed/commodity_master.csv",
+    "rows": 312,
+    "columns": 12,
+    "date_range_start": "2000-01-01",
+    "date_range_end": "2025-12-01",
+    "commodity_sources": {
+      "aluminum": "data/warehouse/aluminum_worldbank.csv",
+      "lithium": "data/warehouse/lithium_combined.csv (USGS pre-2012-06 + IMF post-2012-06)",
+      "cobalt": "data/warehouse/cobalt_imf_monthly.csv"
+    },
+    "macro_sources": {
+      "fred": "data/warehouse/macro_fred.csv",
+      "vix": "data/warehouse/vix_yahoo.csv"
+    },
+    "missing_values": {
+      "aluminum_usd_mt": 0,
+      "lithium_usd_mt": 0,
+      "cobalt_usd_mt": 0,
+      "wti_crude_usd": 0,
+      "natural_gas_usd": 0,
+      "industrial_production_idx": 0,
+      "usd_cny": 0,
+      "vix": 0
+    }
+  }
+}

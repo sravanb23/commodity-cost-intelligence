@@ -1,0 +1,16 @@
+scenario,commodity,analogue,base_price,shocked_price,pct_change,abs_change
+Strait of Hormuz Closure,Aluminum,Russia-Ukraine War,2875.53,2686.320126,-6.5799999999999965,-189.20987400000013
+Strait of Hormuz Closure,Lithium,Russia-Ukraine War,95256.61,172100.117287,80.67,76843.507287
+Strait of Hormuz Closure,Cobalt,Russia-Ukraine War,51872.69,49087.12654700001,-5.369999999999997,-2785.563452999995
+China Supply Restriction,Aluminum,China Lockdowns,2875.53,2920.6758210000003,1.5700000000000047,45.14582100000007
+China Supply Restriction,Lithium,China Lockdowns,95256.61,87236.003438,-8.420000000000005,-8020.606562000001
+China Supply Restriction,Cobalt,China Lockdowns,51872.69,43936.16843,-15.300000000000002,-7936.521570000004
+Global Recession,Aluminum,Financial Crisis,2875.53,1716.403857,-40.31,-1159.1261430000002
+Global Recession,Lithium,Financial Crisis,95256.61,95132.776407,-0.12999999999999678,-123.83359300000302
+Global Recession,Cobalt,Financial Crisis,51872.69,27891.945412999998,-46.230000000000004,-23980.744587000005
+EV Demand Surge,Aluminum,EV/Battery Boom,2875.53,3489.7432080000003,21.36,614.2132080000001
+EV Demand Surge,Lithium,EV/Battery Boom,95256.61,270500.19541700004,183.97,175243.58541700005
+EV Demand Surge,Cobalt,EV/Battery Boom,51872.69,70463.86209600001,35.84,18591.17209600001
+Base Case (No Shock),Aluminum,,2875.53,2875.53,0.0,0.0
+Base Case (No Shock),Lithium,,95256.61,95256.61,0.0,0.0
+Base Case (No Shock),Cobalt,,51872.69,51872.69,0.0,0.0

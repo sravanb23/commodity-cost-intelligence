@@ -1,0 +1,71 @@
+{
+  "last_validated": "2026-03-17 00:17:25",
+  "status": "HEALTHY",
+  "issues": [],
+  "files": {
+    "aluminum": {
+      "status": "OK",
+      "path": "data/warehouse/aluminum_worldbank.csv",
+      "rows": 312,
+      "date_start": "2000-01-01",
+      "date_end": "2025-12-01",
+      "missing": 0
+    },
+    "lithium_combined": {
+      "status": "OK",
+      "path": "data/warehouse/lithium_combined.csv",
+      "rows": 314,
+      "date_start": "2000-01-01",
+      "date_end": "2026-02-01",
+      "missing": 0
+    },
+    "lithium_usgs": {
+      "status": "OK",
+      "path": "data/warehouse/lithium_usgs.csv",
+      "rows": 22,
+      "date_start": "2000-01-01",
+      "date_end": "2021-01-01",
+      "missing": 0
+    },
+    "lithium_imf_raw": {
+      "status": "OK",
+      "path": "data/warehouse/lithium_imf_raw.csv",
+      "rows": 165,
+      "date_start": "2012-06-01",
+      "date_end": "2026-02-01",
+      "missing": 0
+    },
+    "cobalt_imf": {
+      "status": "OK",
+      "path": "data/warehouse/cobalt_imf_monthly.csv",
+      "rows": 314,
+      "date_start": "2000-01-01",
+      "date_end": "2026-02-01",
+      "missing": 0
+    },
+    "cobalt_usgs": {
+      "status": "OK",
+      "path": "data/warehouse/cobalt_usgs.csv",
+      "rows": 22,
+      "date_start": "2000-01-01",
+      "date_end": "2021-01-01",
+      "missing": 0
+    },
+    "macro_fred": {
+      "status": "OK",
+      "path": "data/warehouse/macro_fred.csv",
+      "rows": 315,
+      "date_start": "2000-01-01",
+      "date_end": "2026-03-01",
+      "missing": 2
+    },
+    "vix": {
+      "status": "OK",
+      "path": "data/warehouse/vix_yahoo.csv",
+      "rows": 315,
+      "date_start": "2000-01-01",
+      "date_end": "2026-03-01",
+      "missing": 0
+    }
+  }
+}
