@@ -296,10 +296,4 @@ Full data lineage is documented programmatically in `data/processed/data_lineage
 
 ---
 
-## Certification
-
-**AWS Certified Data Engineer – Associate**
-
----
-
 *Built as part of a commodity finance analytics portfolio targeting procurement finance roles in high-volume electronics manufacturing.*
